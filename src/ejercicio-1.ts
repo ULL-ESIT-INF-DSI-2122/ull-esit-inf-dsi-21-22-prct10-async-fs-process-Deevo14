@@ -10,7 +10,6 @@ function productTable(N:number):(number[][]|string){
                     
             }
         }
-
         return result;
     }
 
