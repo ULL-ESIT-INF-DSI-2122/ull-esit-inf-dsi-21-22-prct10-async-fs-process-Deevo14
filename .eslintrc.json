@@ -16,6 +16,8 @@
     ],
     "rules": {
         "require-jsdoc": "off",
-        "valid-jsdoc": "off"
+        "valid-jsdoc": "off",
+        "indent":"off",
+        "space-before-blocks":"off"
     }
 }
