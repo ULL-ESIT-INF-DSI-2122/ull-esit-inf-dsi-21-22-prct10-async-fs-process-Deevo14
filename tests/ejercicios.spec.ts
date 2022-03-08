@@ -4,6 +4,7 @@ import {expect} from 'chai';
 import {productTable} from '../src/ejercicio-1';
 import {fromArrayToRanges} from '../src/ejercicio-2';
 import {fromRangesToArray} from '../src/ejercicio-2';
+import {decodeResitor} from '../src/ejercicio-3';
 
 describe('productTable tests', () => {
   it('productTable(2) returns [[1, 2], [2, 4]]', () => {
@@ -46,4 +47,13 @@ describe('fromRangesToArray tests', () => {
     it('fromRangesToArray "3, 5_7, 9_10" returs [3, 5, 6, 7, 9, 10]', () => {
       expect(fromRangesToArray('3, 5_7, 9_10')).to.eql([3, 5, 6, 7, 9, 10]);
     });
+});
+
+describe('decodeResistor tests', () => {
+  it('decodeResistor "Marrón-Verde" returs 15', () => {
+    expect(decodeResitor('Marrón-Verde')).to.equal(15);
+  });
+  it('decodeResistor "Marrón-Verde-Azul" returs 15', () => {
+    expect(decodeResitor('Marrón-Verde-Azul')).to.equal(15);
+  });
 });
