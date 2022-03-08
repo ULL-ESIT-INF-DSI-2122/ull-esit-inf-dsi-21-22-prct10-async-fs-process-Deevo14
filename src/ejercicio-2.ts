@@ -20,3 +20,49 @@ export function fromArrayToRanges(lista:number[]):string {
   }
   return ranges;
 }
+
+export function fromRangesToArray(ranges:string):number[]{
+    const lista:number[] = [];
+    const numerosSplited:string[] = ranges.split(/[\s,_]+/);
+    let guion:number = 0;
+    let aux:number = 0;
+    let pos:number = 0;
+
+    for (let i:number = 0; i < ranges.length; i++){
+        switch (ranges[i]){
+            case ',': {
+                break;
+            }
+            case '_': {
+                while ( aux < (parseInt(numerosSplited[pos]) - 1)){
+                    aux++;
+                    lista.push(aux);
+                }
+                break;
+            }
+            case '-': {
+                guion = 1;
+                break;
+            }
+            case ' ': {
+                break;
+            }
+            default: {
+                if (parseInt(ranges[i + 1]) === (2 || 4)){
+                    i++;
+                }
+                lista.push(parseInt(numerosSplited[pos]));
+                aux = parseInt(numerosSplited[pos]);
+                pos++;
+                break;
+            }
+        }
+    }
+    if (guion === 1){
+        lista.length = lista.length;
+    } else {
+        lista.length = lista.length - 1;
+    }
+
+    return lista;
+}
