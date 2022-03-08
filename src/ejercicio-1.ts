@@ -1,3 +1,8 @@
+/** Finalizada
+ *
+ * @param N
+ * @returns
+ */
 export function productTable(N:number):(number[][]|string) {
   const result:number[][] = [];
 

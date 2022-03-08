@@ -1,3 +1,8 @@
+/** Intentar simplificar codigo sobretodo de la segunda funcion
+ *
+ * @param lista
+ * @returns
+ */
 export function fromArrayToRanges(lista:number[]):string {
   let ranges:string = '';
   let auxstring:number[] = [];
