@@ -17,6 +17,7 @@ import {dPointAdd} from '../src/ejercicio-9';
 import {dPointSub} from '../src/ejercicio-9';
 import {dPointMult} from '../src/ejercicio-9';
 import {dPointDist} from '../src/ejercicio-9';
+import {cartesia} from '../src/ejercicio-10';
 
 
 describe('productTable tests', () => {
@@ -118,7 +119,7 @@ describe('multiplyAll tests', () => {
 
 describe('dPoint tests', () => {
   it('dPointAdd ([3, 5, 8], [7, 3, 2]) returns ([10, 8, 10])', () => {
-    expect(dPointAdd([3, 5, 8], [7, 3, 2])).to.eql([ 10, 8, 10]);
+    expect(dPointAdd([3, 5, 8], [7, 3, 2])).to.eql([10, 8, 10]);
   });
   it('dPointSub ([3, 5, 8, 5], [7, 3, 2, 1]) returns ([-4, 2, 6, 4])', () => {
     expect(dPointSub([3, 5, 8, 5], [7, 3, 2, 1])).to.eql([-4, 2, 6, 4]);
@@ -128,5 +129,17 @@ describe('dPoint tests', () => {
   });
   it('dPointDist ([3, 2, 4], [7, 5, 4]) returns (5)', () => {
     expect(dPointDist([3, 2, 4], [7, 5, 4])).to.eql(5);
+  });
+});
+
+describe('cartesia tests', () => {
+  it('cartesia ["n", "e", "n", "o", "s", "e", "s", "s", "o", "n"] returns "true"', () => {
+    expect(cartesia(['n', 'e', 'n', 'o', 's', 'e', 's', 's', 'o', 'n'])).to.be.true;
+  });
+  it('cartesia ["n", "n", "n", "o", "s", "e", "s", "s", "o", "n"] returns "false"', () => {
+    expect(cartesia(['n', 'n', 'n', 'o', 's', 'e', 's', 's', 'o', 'n'])).to.be.false;
+  });
+  it('cartesia ["n", "e", "n", "o", "s", "e", "s", "s", "o"] returns "false"', () => {
+    expect(cartesia(['n', 'e', 'n', 'o', 's', 'e', 's', 's', 'o'])).to.be.false;
   });
 });
