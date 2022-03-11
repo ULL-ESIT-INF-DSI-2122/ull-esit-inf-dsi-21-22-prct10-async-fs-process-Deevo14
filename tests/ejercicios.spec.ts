@@ -71,7 +71,7 @@ describe('decodeResistor tests', () => {
   });
 });
 
-/* describe('meshArray tests', () => {
+describe('meshArray tests', () => {
   it('meshArray [“allow”, “lowering”, “ringmaster”, “terror”] returs "lowringter"', () => {
     expect(meshArray(['allow', 'lowering', 'ringmaster', 'terror'])).to.equal('lowringter');
   });
@@ -79,7 +79,7 @@ describe('decodeResistor tests', () => {
     expect(meshArray(['kingdom', 'dominator', 'notorious', 'usual', 'allegory'])).to.equal('Error al encadenar');
   });
 });
-*/
+
 
 describe('meanAndConcatenate tests', () => {
   it('meanAndConcatenate ["u", 6, "d", 1, "i", "w", 6, "s", "t", 4, "a", 6, "g", 1, 2, "w", 8, "o2, 2, 0] returns [3.6, "udiwstagwo"]', () => {
@@ -130,4 +130,3 @@ describe('dPoint tests', () => {
     expect(dPointDist([3, 2, 4], [7, 5, 4])).to.eql(5);
   });
 });
-
