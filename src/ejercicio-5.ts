@@ -1,28 +1,27 @@
+/* eslint-disable max-len */
 /**
- * arreglar "ANYs"
+ *
  * @param tupla
  * @returns
  */
-export function meanAndConcatenate(tupla:any[]):string[]{
+export function meanAndConcatenate(tupla:(number | string)[]):(number | string)[]{
     let media:number = 0;
     let concatenate:string = '';
-    let aux:number = 0;
-    const numbers:string = '0123456789';
-    const abc:string = 'abcdefghijklmnñopqrstuvwxyz';
+    let count:number = 0;
 
-    for (let i = 0; i < tupla.length; i++){
-        if (numbers.search(tupla[i]) != -1){
-            media += parseInt(tupla[i]);
-            aux++;
+    tupla.forEach((x) => {
+        if (typeof x === 'number'){
+            media += x;
+            count++;
         }
-        if (abc.search(tupla[i]) != -1){
-            concatenate += tupla[i];
+        else if (typeof x === 'string'){
+            concatenate += x;
         }
-    }
+    });
 
-    media /= aux;
+    media /= count;
 
-    const result:any[] = [media, concatenate];
+    const result:(number | string)[] = [media, concatenate];
 
     return result;
 }

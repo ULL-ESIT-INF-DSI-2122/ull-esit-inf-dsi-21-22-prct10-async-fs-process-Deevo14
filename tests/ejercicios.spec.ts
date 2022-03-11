@@ -13,6 +13,11 @@ import {pointAdd} from '../src/ejercicio-8';
 import {pointSub} from '../src/ejercicio-8';
 import {pointMult} from '../src/ejercicio-8';
 import {pointDist} from '../src/ejercicio-8';
+import {dPointAdd} from '../src/ejercicio-9';
+import {dPointSub} from '../src/ejercicio-9';
+import {dPointMult} from '../src/ejercicio-9';
+import {dPointDist} from '../src/ejercicio-9';
+
 
 describe('productTable tests', () => {
   it('productTable(2) returns [[1, 2], [2, 4]]', () => {
@@ -91,6 +96,38 @@ describe('moveZeros tests', () => {
 describe('multiplyAll tests', () => {
   it('multiplyAll ([2, 6, 8])(3) returns [6, 18, 24]', () => {
     expect(multiplyAll([2, 6, 8])(3)).to.eql([6, 18, 24]);
+  });
+});
+
+
+ describe('Point tests', () => {
+  it('pointAdd ([3, 5], [7, 3]) returns ([10, 8])', () => {
+    expect(pointAdd([3, 5], [7, 3])).to.eql([10, 8]);
+  });
+  it('pointSub ([3, 5], [7, 3]) returns ([-4, 2])', () => {
+    expect(pointSub([3, 5], [7, 3])).to.eql([-4, 2]);
+  });
+  it('pointMult ([3, 5], 3) returns ([9, 15])', () => {
+    expect(pointMult([3, 5], 3)).to.eql([9, 15]);
+  });
+  it('pointDist ([3, 2], [7, 5]) returns (5)', () => {
+    expect(pointDist([3, 2], [7, 5])).to.eql(5);
+  });
+});
+
+
+describe('dPoint tests', () => {
+  it('dPointAdd ([3, 5, 8], [7, 3, 2]) returns ([10, 8, 10])', () => {
+    expect(dPointAdd([3, 5, 8], [7, 3, 2])).to.eql([ 10, 8, 10]);
+  });
+  it('dPointSub ([3, 5, 8, 5], [7, 3, 2, 1]) returns ([-4, 2, 6, 4])', () => {
+    expect(dPointSub([3, 5, 8, 5], [7, 3, 2, 1])).to.eql([-4, 2, 6, 4]);
+  });
+  it('dPointMult ([3, 5, 8, 4], 2) returns ([6, 10, 16, 8])', () => {
+    expect(dPointMult([3, 5, 8, 4], 2)).to.eql([6, 10, 16, 8]);
+  });
+  it('dPointDist ([3, 2, 4], [7, 5, 4]) returns (5)', () => {
+    expect(dPointDist([3, 2, 4], [7, 5, 4])).to.eql(5);
   });
 });
 
