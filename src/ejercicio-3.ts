@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars */
-/* eslint-disable max-len */
-
 /**
- *  Finalizada
- * @param resistance
- * @returns
+ * Función que sirve para calcular el valor de una resistencia
+ *
+ * @param resistance Le pasamos como parametro un string con los colores
+ * de la resistencia
+ * @returns Nos devuelve el valor de los dos primeros colores del string
  */
 export function decodeResitor(resistance:string):number{
-    enum colors {Negro, Marrón, Rojo, Naranja, Amarillo, Verde, Azul, Violeta, Gris, Blanco};
+    enum colors {Negro, Marrón, Rojo, Naranja, Amarillo, Verde,
+        Azul, Violeta, Gris, Blanco};
+
     let result:string = '';
     const lista = resistance.split('-');
 

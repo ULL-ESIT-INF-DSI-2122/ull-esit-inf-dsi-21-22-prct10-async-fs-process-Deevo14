@@ -1,7 +1,11 @@
 /**
+ * Función que, dado un array de palabras, comprueba si estas
+ * están encadenadas
  *
- * @param words
- * @returns
+ * @param words recibe un array de string donde cada string es una palabra
+ * @returns Si todas las palabras estan encadenadas devuelve un string
+ * con las letras que encadenan dichas palabras, en caso contrario
+ * devuelve un error al encadenar.
  */
 export function meshArray(words:string[]):string{
     let result:string = '';

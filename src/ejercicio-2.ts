@@ -1,7 +1,10 @@
-/** Intentar simplificar codigo sobretodo de la segunda funcion
- *
- * @param lista
- * @returns
+/**
+ * Función que recibe un array de numeros enteros y los comprime en rangos.
+ * Es decir, si tenemos en el array [6, 7, 8, 10] el string que nos devuelve
+ * será '6_8, 10'.
+ * @param lista Recibe como parametro un array de numeros enteros
+ * @returns Retornamos un string que contiene los rangos de numeros del array
+ * y los numeros sueltos.
  */
 export function fromArrayToRanges(lista:number[]):string {
   let ranges:string = '';
@@ -10,12 +13,12 @@ export function fromArrayToRanges(lista:number[]):string {
   for (let i:number = 0; i < lista.length; i++) {
     if (lista[i] === (lista[i + 1] - 1)) {
         auxstring.push(lista[i]);
-    } else {
+    }
+    else {
         if (auxstring.length != 0){
             ranges += auxstring[0] + '_';
             auxstring = [];
         }
-
         if (i < lista.length - 1){
             ranges += lista[i] + ', ';
         } else {
@@ -26,6 +29,13 @@ export function fromArrayToRanges(lista:number[]):string {
   return ranges;
 }
 
+/**
+ * Función contraria a la anterior, recibimos un string con rangos de números
+ * enteros y devolvemos un array con todos los numeros que se encuentran dentro
+ * de dichos rangos.
+ * @param ranges Recibimos un string que representa una serie de rangos
+ * @returns Devolvemos un array con todos los numeros correspondientes
+ */
 export function fromRangesToArray(ranges:string):number[]{
     const lista:number[] = [];
     const numerosSplited:string[] = ranges.split(/[\s,_]+/);

@@ -1,22 +1,22 @@
 /**
- *  Usamos dos arrays, preguntar profesor si es solo con uno
- * @param nums
- * @returns
+ * Funcion donde recibimos un arrays de numeros y movemos los ceros al final
+ *
+ * @param nums recibimos como parametro un array de numbers
+ * @returns retornamos un array de numbers con los ceros al final del mismo
  */
 export function moveZeros(nums:number[]):number[]{
-    const aux:number = nums.length;
     const nums2:number[] = [];
 
-    for (let i = 0; i < aux; i++){
-        if (nums[i] !== 0){
-            nums2.push(nums[i]);
+    nums.forEach((x) => {
+        if (x !== 0){
+            nums2.push(x);
         }
-    }
-    for (let i = 0; i < aux; i++){
-        if (nums[i] === 0){
+    });
+    nums.forEach((x) => {
+        if (x === 0){
             nums2.push(0);
         }
-    }
+    });
 
     return nums2;
 }
