@@ -49,34 +49,34 @@ describe('fromArrayToRanges tests', () => {
 });
 
 describe('fromRangesToArray tests', () => {
-    it('fromRangesToArray "5_7, 9, 12_14" returs [5, 6, 7, 9, 12, 13, 14]', () => {
+    it('fromRangesToArray "5_7, 9, 12_14" returns [5, 6, 7, 9, 12, 13, 14]', () => {
       expect(fromRangesToArray('5_7, 9, 12_14')).to.eql([5, 6, 7, 9, 12, 13, 14]);
     });
-    it('fromRangesToArray "-3_-1, 3, 5_7" returs [-3, -2, -1, 3, 5, 6, 7]', () => {
+    it('fromRangesToArray "-3_-1, 3, 5_7" returns [-3, -2, -1, 3, 5, 6, 7]', () => {
       expect(fromRangesToArray('-3_-1, 3, 5_7')).to.eql([-3, -2, -1, 3, 5, 6, 7]);
       });
-    it('fromRangesToArray "17" returs [17]', () => {
+    it('fromRangesToArray "17" returns [17]', () => {
       expect(fromRangesToArray('17')).to.eql([17]);
     });
-    it('fromRangesToArray "3, 5_7, 9_10" returs [3, 5, 6, 7, 9, 10]', () => {
+    it('fromRangesToArray "3, 5_7, 9_10" returns [3, 5, 6, 7, 9, 10]', () => {
       expect(fromRangesToArray('3, 5_7, 9_10')).to.eql([3, 5, 6, 7, 9, 10]);
     });
 });
 
 describe('decodeResistor tests', () => {
-  it('decodeResistor "Marrón-Verde" returs 15', () => {
+  it('decodeResistor "Marrón-Verde" returns 15', () => {
     expect(decodeResitor('Marrón-Verde')).to.equal(15);
   });
-  it('decodeResistor "Marrón-Verde-Azul" returs 15', () => {
+  it('decodeResistor "Marrón-Verde-Azul" returns 15', () => {
     expect(decodeResitor('Marrón-Verde-Azul')).to.equal(15);
   });
 });
 
 describe('meshArray tests', () => {
-  it('meshArray [“allow”, “lowering”, “ringmaster”, “terror”] returs "lowringter"', () => {
+  it('meshArray [“allow”, “lowering”, “ringmaster”, “terror”] returns "lowringter"', () => {
     expect(meshArray(['allow', 'lowering', 'ringmaster', 'terror'])).to.equal('lowringter');
   });
-  it('meshArray [“kingdom”, “dominator”, “notorious”, “usual”, “allegory”] returs "Error al encadenar"', () => {
+  it('meshArray [“kingdom”, “dominator”, “notorious”, “usual”, “allegory”] returns "Error al encadenar"', () => {
     expect(meshArray(['kingdom', 'dominator', 'notorious', 'usual', 'allegory'])).to.equal('Error al encadenar');
   });
 });
@@ -118,8 +118,8 @@ describe('multiplyAll tests', () => {
 
 
 describe('dPoint tests', () => {
-  it('dPointAdd ([3, 5, 8], [7, 3, 2]) returns ([10, 8, 10])', () => {
-    expect(dPointAdd([3, 5, 8], [7, 3, 2])).to.eql([10, 8, 10]);
+  it('dPointAdd ([3, 5, 8, 4, 2], [7, 3, 2, 5, 3]) returns ([10, 8, 10])', () => {
+    expect(dPointAdd([3, 5, 8, 4, 2], [7, 3, 2, 5, 3])).to.eql([10, 8, 10, 9, 5]);
   });
   it('dPointSub ([3, 5, 8, 5], [7, 3, 2, 1]) returns ([-4, 2, 6, 4])', () => {
     expect(dPointSub([3, 5, 8, 5], [7, 3, 2, 1])).to.eql([-4, 2, 6, 4]);

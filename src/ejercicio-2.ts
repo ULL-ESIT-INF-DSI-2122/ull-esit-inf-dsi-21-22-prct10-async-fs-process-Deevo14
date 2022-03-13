@@ -63,7 +63,7 @@ export function fromRangesToArray(ranges:string):number[]{
                 break;
             }
             default: {
-                if (parseInt(ranges[i + 1]) === (2 || 4)){
+                if (parseInt(ranges[i + 1]) === (2 || 4 )){
                     i++;
                 }
                 lista.push(parseInt(numerosSplited[pos]));

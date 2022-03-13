@@ -11,10 +11,10 @@ export function multiplyAll(nums:number[]):Function{
      * @param x recibe como parametro un numero
      * @returns retorna un array de numbers
      */
-    function multiply(x:number):number[]{
-        for (let i = 0; i < nums.length; i++){
-            result.push(nums[i] * x);
-        }
+    function multiply(mult:number):number[]{
+        nums.forEach((x) => {
+            result.push(x * mult);
+        });
         return result;
     }
     return multiply;

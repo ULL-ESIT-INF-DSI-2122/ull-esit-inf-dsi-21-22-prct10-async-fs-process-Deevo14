@@ -1,7 +1,3 @@
-/**
- * Tipo de dato que consiste en un array con dos numeros, los cuales
- * son las cordenadas del punto de 2 dimensiones.
- */
 type Point = [number, number];
 
 /**
