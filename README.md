@@ -274,7 +274,8 @@ Recorremos la tupla que se nos ha introducido como parámetro y:
 
  Finalmente, hallamos la media dividiendo por los números que hemos contado e imprimimos el resultado como una tupla donde el primer valor es la media de tipo _number_ y el segundo es la concatenación de las letras, de tipo _string_.
 
- ### __Ejercicio 6__
+
+### __Ejercicio 6__
 
 *Dado un array de números, escriba una función moveZeros que reciba como parámetro dicho array y mueva todos los ceros presentes en el array al final del mismo. El array debe mantener el mismo orden respecto al resto de elementos.*
 
@@ -304,7 +305,8 @@ Recorremos cada elemento del _array_ 2 veces.
 
  Retornamos el _array_ final con los ceros al final.
 
- ### __Ejercicio 7__
+
+### __Ejercicio 7__
 
 *Cree una función multiplyAll que tome como parámetro un array de números. Esta función deberá devolver como resultado otra función que toma como argumento un único valor numérico y devuelve un nuevo array. El array devuelto por la segunda función debe ser el resultado de la multiplicación de los números del array por el valor numérico que recibe la segunda función. Además, no se debe modificar el primer array.*
 
@@ -334,7 +336,8 @@ El programa funcionaría tal que:
  3. A la función __multiply__ le entrá como parámetro el número con el que multiplicaremos el _array_ nums, el cual podemos usar  ya que __multiply__ la hemos creado dentro de la función principal. Recorremos los valores de _nums_ y los vamos multiplicando y guardando en _result_.
  4. Finalmente retornamos _result_ que será el resultado final.
 
- ### __Ejercicio 8__
+
+### __Ejercicio 8__
 
 *Un punto describe una posición determinada respecto a un sistema de coordenadas preestablecido. Suponiendo un sistema de dos coordenadas (x, y), un punto en el espacio se denotaría de la forma Point(X, Y). A partir de la siguiente definición, cree un tipo de dato capaz de definir un punto bidimensional.*
 
@@ -394,7 +397,7 @@ Hemos creado 4 funciones:
  - __Multiplicación por un número__: Multiplicamos cada coordenada por el número que se nos pasa como parámetro y retornamos el punto resultante.
  - __Distancia euclídea entre dos puntos__: Usamos la fórmula de la distancia euclídea.
 
- ### __Ejercicio 9__
+### __Ejercicio 9__
 
 *A partir del desarrollo realizado para el ejericio anterior, cree un tipo de datos que sea capaz de definir puntos de 3 o más dimensiones. Esto es, un punto debe tener, como mínimo, tres dimensiones y, como máximo, las que el usuario desee. Además, desarrolle las mismas funciones que en el ejercicio anterior, de modo que puedan operar sobre puntos n-dimensionales. Tenga en cuenta que no se pueden operar los puntos definidos en diferentes sistemas de coordenadas. Es decir, no podemos sumar un punto de tres dimensiones y un punto de cinco dimensiones.*
 
