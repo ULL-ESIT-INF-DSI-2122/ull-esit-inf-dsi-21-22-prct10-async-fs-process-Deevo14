@@ -3,17 +3,17 @@
  * un array con la media de los numeros y un string con la concatenacion
  * de las letras
  *
- * @param tuple Array con valores de tipo string y number
+ * @param lista Array con valores de tipo string y number
  * @returns Array donde el primer valor es la media de los numeros y
  * el segundo es la concatenacion de las letras
  */
-export function meanAndConcatenate(tuple:(number | string)[])
+export function meanAndConcatenate(lista:(number | string)[])
 :[number, string]{
     let media:number = 0;
     let concatenate:string = '';
     let count:number = 0;
 
-    tuple.forEach((x) => {
+    lista.forEach((x) => {
         if (typeof x === 'number'){
             media += x;
             count++;

@@ -243,13 +243,13 @@ Al final comprobamos si se han encadenado todas las palabras, en el casod de que
 
 
 ```
-export function meanAndConcatenate(tuple:(number | string)[])
+export function meanAndConcatenate(lista:(number | string)[])
 :[number, string]{
     let media:number = 0;
     let concatenate:string = '';
     let count:number = 0;
 
-    tuple.forEach((x) => {
+    lista.forEach((x) => {
         if (typeof x === 'number'){
             media += x;
             count++;
@@ -267,7 +267,7 @@ export function meanAndConcatenate(tuple:(number | string)[])
 }
 ```
 
-Recorremos la tupla que se nos ha introducido como parámetro y:
+Recorremos el array que se nos ha introducido como parámetro y:
 
  - Si la variable que encontramos es un tipo _number_, sumamos el valor a la variable _media_ creada antes y sumamos 1 al counter para saber cuantos números hemos añadido.
  - Si la variable es un tipo _string_, guardamos la letra en _concatenate.
@@ -495,3 +495,8 @@ Primero comprobamos que el camino que se nos ha pasado se puede hacer en exactam
 
 ## 3. Conclusiones
 
+En está práctica hemos visto como realizar diversos programas con arrays, enums, etc. Los ejercicios que más tiempo me llevaron fueron el 2 y el 4, además de que la segunda
+función del 2 tiene fallos, las otras funciones estuve bastante tiempo para conseguir hacerlas correctamente. De resto no tuve muchos problemas.
+
+En cuanto a TypeDoc, Mocha y Chai son herramientas muy fáciles de usar y muy eficientes, sobre todo la parte de hacer los "tests", ya que ves los errores de manera
+rápida y te permite realizar comprobaciones con diferentes datos a la vez, lo cual es muy útil para identificar errores simultaneos.
