@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc-watch --onSuccess \"node dist/index.js\"",
     "doc": "typedoc",
-    "test": "mocha"
+    "test": "mocha" 
   },
   "repository": {
     "type": "git",
