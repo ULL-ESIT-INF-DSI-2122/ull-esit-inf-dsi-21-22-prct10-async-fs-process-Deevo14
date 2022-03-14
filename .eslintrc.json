@@ -19,6 +19,6 @@
         "valid-jsdoc": "off",
         "indent":"off",
         "space-before-blocks":"off",
-        "brace-style":"off"
+        "brace-style":"off" 
     }
 }
