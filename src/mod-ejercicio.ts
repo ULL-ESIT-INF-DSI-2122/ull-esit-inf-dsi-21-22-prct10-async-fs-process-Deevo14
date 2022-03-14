@@ -60,7 +60,20 @@ export class Profesor extends Persona {
 
 export class Asignatura {
     public nombre:string;
-    constructor(nombre:string){
+    private listaProfesores:string[];
+    private listaAlumnos:string[];
+    constructor(nombre:string, listaProfesores:string[], listaAlumnos:string[]){
         this.nombre = nombre;
+        this.listaProfesores = listaProfesores;
+        this.listaAlumnos = listaAlumnos;
+    }
+
+    getListaProfesores(){
+        return this.listaProfesores;
+    }
+    getListaAlumnos(){
+        return this.listaAlumnos;
     }
 }
+
+let Juan = new Profesor('Juan', 'Garcia', '')
