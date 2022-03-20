@@ -1,10 +1,22 @@
 /* eslint-disable max-len */
 import {Pokemon} from './pokemon';
-
+/**
+ * Clase Combat donde haremos los combates entre dos Pokemons
+ */
 export class Combat {
+    /**
+     * Constructor de la clase Combat donde le pasamos como parámetros dos Pokemons
+     * @param pokemon1 Primer Pokemon que va a combatir
+     * @param pokemon2 Segundo Pokemon que va a combatir
+     */
     constructor(public pokemon1: Pokemon, public pokemon2: Pokemon){};
 
-
+    /**
+     * Funcion para calcular el multiplicador de daño del ataque de un Pokemon contra otro
+     * @param pokemon1Type Tipo del primer Pokemon
+     * @param pokemon2Type Tipo del segundo Pokemon
+     * @returns Retornamos el multiplidor de daño(0.5, 1 o 2)
+     */
     effectivity(pokemon1Type:string, pokemon2Type:string):number {
         let damageValue:number = 0;
         let effectivity:string = '';
@@ -78,11 +90,12 @@ export class Combat {
                 break;
             }
         }
-
-
         return damageValue;
     }
 
+    /**
+     * Funcion para empezar el combate entre los dos Pokemons
+     */
     start(){
         let turn = 1;
         while (this.pokemon1.hp > 0 && this.pokemon2.hp > 0){

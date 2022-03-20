@@ -10,8 +10,8 @@ describe('Combate Pokemon', () => {
 
     const Pokedex1 = new Pokedex([]);
 
-    Pokedex1.addPokemon(Venusaur);
-    Pokedex1.addPokemon(Charizard);
+    Pokedex1.añadirPokemon(Venusaur);
+    Pokedex1.añadirPokemon(Charizard);
 
     const FirstCombat = new Combat(Charizard, Venusaur);
     FirstCombat.start();
