@@ -29,7 +29,7 @@ export class Game {
         while (this.players[0].fichas > 0 && this.players[1].fichas > 0){
             for (let i = 1; i < 3; i++){
                 let error = 0;
-                let column = -1;
+                let column = 0;
                 mapa.imprimirMap();
                 while (mapa.insertFicha(column - 1, i) !== true){
                     if (error === 1){
