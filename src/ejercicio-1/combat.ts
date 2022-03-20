@@ -100,14 +100,22 @@ export class Combat {
         let turn = 1;
         while (this.pokemon1.hp > 0 && this.pokemon2.hp > 0){
             if (turn % 2 !== 0){
-                this.pokemon2.hp -= (this.pokemon1.attack - this.pokemon2.defense) * this.effectivity(this.pokemon1.type, this.pokemon2.type);
+                this.pokemon2.hp -= (50 * (this.pokemon1.attack / this.pokemon2.defense)) * this.effectivity(this.pokemon1.type, this.pokemon2.type);
                 console.log(`Turno ${turn}: ${this.pokemon1.name} HP = ${this.pokemon1.hp}, ${this.pokemon2.name} HP = ${this.pokemon2.hp}`);
             }
             else {
-                this.pokemon1.hp -= (this.pokemon2.attack - this.pokemon1.defense) * this.effectivity(this.pokemon2.type, this.pokemon1.type);
+                this.pokemon1.hp -= (50 * (this.pokemon2.attack - this.pokemon1.defense)) * this.effectivity(this.pokemon2.type, this.pokemon1.type);
                 console.log(`Turno ${turn}: ${this.pokemon1.name} HP = ${this.pokemon1.hp}, ${this.pokemon2.name} HP = ${this.pokemon2.hp}`);
             }
             turn++;
+        }
+        if (turn % 2 !== 0){
+            console.log(`Gana ${this.pokemon2.name}`);
+            return this.pokemon2.name;
+        }
+        else {
+            console.log(`Gana ${this.pokemon1.name}`);
+            return this.pokemon1.name;
         }
     }
 }
