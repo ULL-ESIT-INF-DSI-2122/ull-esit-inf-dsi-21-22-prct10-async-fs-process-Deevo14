@@ -169,7 +169,8 @@ Está primera clase es muy simple, con ella creamos a un jugador y le asignamos 
 poder jugar. El constructor será solo el nombre del jugador, ya que no necesitamos más datos.
 
 - Map:
-```
+
+``` 
 export type Ficha = ('Vacia' | 'Roja' | 'Azul');
 
 export class Map{
@@ -340,7 +341,8 @@ Después nos encontramos con 3 funciones que comprueban el mapa de 3 formas para
  La última función, llamada __checkWin__, compureba si alguna de las 3 funciones de checkeo ha retornado _true_, si es así, retornamos _true_ para dar por finalizada la partida.
 
   - Game:
-```
+  
+``` 
 const scanf = require('scanf');
 
 export class Game {
