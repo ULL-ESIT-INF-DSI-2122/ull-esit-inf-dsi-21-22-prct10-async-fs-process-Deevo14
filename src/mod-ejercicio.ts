@@ -75,5 +75,3 @@ export class Asignatura {
         return this.listaAlumnos;
     }
 }
-
-let Juan = new Profesor('Juan', 'Garcia', '')
