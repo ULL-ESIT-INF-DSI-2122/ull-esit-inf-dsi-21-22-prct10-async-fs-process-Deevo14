@@ -7,12 +7,11 @@ import {Pokemon} from '../src/ejercicio-1/pokemon';
 describe('Combate Pokemon', () => {
     const Venusaur = new Pokemon('Venusaur', 100, 2, 'plant', 82, 83, 80, 80);
     const Charizard = new Pokemon('Charizard', 90, 1.7, 'fire', 84, 78, 100, 78);
-
     const Pokedex1 = new Pokedex([]);
+    const FirstCombat = new Combat(Charizard, Venusaur);
 
     Pokedex1.añadirPokemon(Venusaur);
     Pokedex1.añadirPokemon(Charizard);
 
-    const FirstCombat = new Combat(Charizard, Venusaur);
     FirstCombat.start();
 });
