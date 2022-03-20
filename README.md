@@ -338,9 +338,9 @@ Después nos encontramos con 3 funciones que comprueban el mapa de 3 formas para
  - __checkDiagonales__: Está función es un poco mas complicada de entender. Recorremos el tablero y cada vez que encontremos una ficha, recorreremos tanto la diagonal inferior izquierda
  como la derecha, si encuentra 4 fichas seguidas del mismo color, retornamos true.
 
- La última función, llamada __checkWin__, compureba si alguna de las 3 funciones de checkeo ha retornado _true_, si es así, retornamos _true_ para dar por finalizada la partida.
+La última función, llamada __checkWin__, compureba si alguna de las 3 funciones de checkeo ha retornado _true_, si es así, retornamos _true_ para dar por finalizada la partida.
 
-  - Game:
+- Game:
   
 ``` 
 const scanf = require('scanf');
