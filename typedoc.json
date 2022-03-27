@@ -1,13 +1,6 @@
 {
     "entryPoints": [
-        "./src/mod-clase.ts",
-        "./src/ejercicio-1/combat.ts",
-        "./src/ejercicio-1/fighter.ts",
-        "./src/ejercicio-1/hogwarts.ts",
-        "./src/ejercicio-1/marvel.ts",
-        "./src/ejercicio-1/pokedex.ts",
-        "./src/ejercicio-1/pokemon.ts",
-        "./src/ejercicio-3/cifrado.ts"
+        "./src/mod-clase.ts"
     ],
     "out": "./docs"
 }
