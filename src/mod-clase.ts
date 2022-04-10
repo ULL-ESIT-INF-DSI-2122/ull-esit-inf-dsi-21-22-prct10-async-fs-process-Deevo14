@@ -4,10 +4,9 @@ export type primeNumberItem = {
 }
 
 /**
- * Clase PrimeNumber
+ * Clase PrimeNumber asqueroso tonto ojala te claven una anguila en el orto
  */
 export class PrimeNumber{
-    
     /**
      * Atributos privados de la clase
      */
@@ -36,7 +35,7 @@ export class PrimeNumber{
         }
     return PrimeNumber.primeNumber;
     }
-     
+
     /**
      * Metodo para calcular los n primeros numeros primos
      * @param n le pasamos como parametro los numeros primos que queremos
@@ -46,13 +45,13 @@ export class PrimeNumber{
         let i:number = 1;
         let counter:number = 0;
         let prime:number = 0;
-        while(counter !== n){   
-            for(let k = 2; k<i;k++){
-                if(i % k == 0){
+        while (counter !== n){
+            for (let k = 2; k<i; k++){
+                if (i % k == 0){
                    prime = 1;
                 }
             }
-            if(prime === 0 || i === 1){
+            if (prime === 0 || i === 1){
                 PrimeNumber.primeNumber.numbers.push(i);
                 counter++;
             }
@@ -70,13 +69,13 @@ export class PrimeNumber{
     getPrimesOnRange(n:number, m:number){
         let prime = 0;
         for (let i = n; i<m; i++){
-            for(let k = 2; k<i;k++){
-                if(i % k == 0){
+            for (let k = 2; k<i; k++){
+                if (i % k == 0){
                    prime = 1;
                 }
             }
-            if(prime === 0 || i === 1){
-                PrimeNumber.primeNumber.range.push(i);  
+            if (prime === 0 || i === 1){
+                PrimeNumber.primeNumber.range.push(i);
             }
             prime = 0;
         }
@@ -97,6 +96,6 @@ export class PrimeNumber{
      * Metodo para retornar el array de items
      */
     getNumbers(){
-        return PrimeNumber.primeNumber.items
+        return PrimeNumber.primeNumber.items;
     }
 }
