@@ -10,4 +10,8 @@ addSong(song :Song) :void {
 addGenre(genero :Genre) :void {
   this.genres.push(genero);
 }
+showPlaylist() {
+  console.log(`Name: ${this.name} Generos: ${this.genres}
+              Duracion: ${this.duration}`);
+}
 }

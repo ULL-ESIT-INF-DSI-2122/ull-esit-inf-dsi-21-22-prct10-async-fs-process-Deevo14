@@ -6,6 +6,10 @@ import {Album} from './album';
 export class Artist {
   constructor(protected name :string, protected group :Group[], protected genre :Genre[],
     protected albums :Album[], protected songs :Song[], protected listeners :number) {}
+
+getListeners() :number {
+  return this.listeners;
+}
 getName() :string{
   return this.name;
 }

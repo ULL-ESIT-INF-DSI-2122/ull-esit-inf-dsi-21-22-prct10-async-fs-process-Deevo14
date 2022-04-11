@@ -9,4 +9,21 @@ export class Album {
                 protected year:number,
                 protected genre:Genre[],
                 protected songs:Song[]){}
+
+    getName():string{
+        return this.name;
+    }
+    getCreator():Artist | Group{
+        return this.creator;
+    }
+    getYear():number{
+        return this.year;
+    }
+    getGenre():Genre[]{
+        return this.genre;
+    }
+    getSongs():Song[]{
+        return this.songs;
+    }
+    
 }
