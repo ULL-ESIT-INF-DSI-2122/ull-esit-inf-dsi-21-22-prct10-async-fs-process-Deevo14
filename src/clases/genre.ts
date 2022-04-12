@@ -5,7 +5,7 @@ import {Album} from './album';
 
 export class Genre {
     constructor(protected name:string,
-                protected artists:Artist[] | Group[],
+                protected artists:(Artist| Group)[],
                 protected songs:Song[],
                 protected albums:Album[]){}
 }
