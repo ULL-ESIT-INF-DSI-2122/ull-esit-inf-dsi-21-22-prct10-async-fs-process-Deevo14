@@ -8,4 +8,7 @@ export class Genre {
                 protected artists:(Artist| Group)[],
                 protected songs:Song[],
                 protected albums:Album[]){}
+    getName() {
+        return this.name;
+    }
 }

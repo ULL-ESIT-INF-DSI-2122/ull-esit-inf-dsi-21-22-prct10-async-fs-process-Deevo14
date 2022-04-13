@@ -1,0 +1,14 @@
+import { Artist } from '../clases/artist';
+export declare const Sefa: Artist;
+export declare const DrPeacock: Artist;
+export declare const Billx: Artist;
+export declare const EvilActivities: Artist;
+export declare const JuanchoMarques: Artist;
+export declare const SuleB: Artist;
+export declare const HardGZ: Artist;
+export declare const Feid: Artist;
+export declare const PhutureNoize: Artist;
+export declare const PauloLondra: Artist;
+export declare const Duki: Artist;
+export declare const DavidOtero: Artist;
+export declare const RomeoSantos: Artist;

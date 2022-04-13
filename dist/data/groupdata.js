@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.MalditaNerea = exports.ViperDiva = exports.GreenDay = exports.LinkinPark = exports.Pendulum = exports.SuiteSoprano = void 0;
+const group_1 = require("../clases/group");
+const genre = require("./genredata");
+const artist = require("./artistdata");
+const album = require("./albumdata");
+exports.SuiteSoprano = new group_1.Group('Suite Soprano', [artist.JuanchoMarques, artist.SuleB], 2010, [genre.Rap], [album.Domenica], 51562);
+exports.Pendulum = new group_1.Group('Pendulum', [], 2002, [genre.DrumAndBass], [album.Inmersion], 23659874);
+exports.LinkinPark = new group_1.Group('Linkin Park', [], 2002, [genre.Rock], [album.HybridTheory], 23569862);
+exports.GreenDay = new group_1.Group('Green Day', [], 2002, [genre.Rock], [album.AmericanIdiot], 20142519);
+exports.ViperDiva = new group_1.Group('Viper Diva', [], 2002, [genre.HardTechno], [], 45679);
+exports.MalditaNerea = new group_1.Group('Viper Diva', [], 2002, [genre.Pop], [], 895794);

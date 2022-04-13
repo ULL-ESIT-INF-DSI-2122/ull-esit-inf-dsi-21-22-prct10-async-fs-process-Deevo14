@@ -10,5 +10,10 @@ export class Song {
                 protected genres:Genre[],
                 protected single:boolean,
                 protected repros:number ){}
+getDurationSeconds() :number {
+    const segundos :number = (this.duration[0] *60) + this.duration[1];
+    return segundos;
 }
+}
+
 
