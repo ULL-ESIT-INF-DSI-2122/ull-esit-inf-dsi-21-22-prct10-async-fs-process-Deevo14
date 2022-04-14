@@ -39,9 +39,8 @@ class Gestor {
             },
         ];
         inquirer.prompt(questions).then((answers) => {
-            if (answers !== playlist.Rave) {
-                playlist.Rave.showPlaylist();
-            }
+            answers.getName();
+            playlist.Rave.showPlaylist();
         });
     }
     createPlaylist() { }

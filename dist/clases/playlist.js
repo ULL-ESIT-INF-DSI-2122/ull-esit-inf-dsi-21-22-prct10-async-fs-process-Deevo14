@@ -13,17 +13,23 @@ class Playlist {
     addGenre(genero) {
         this.genres.push(genero);
     }
+    getName() {
+        console.log(`${this.name}`);
+        return this.name;
+    }
     showPlaylist() {
-        console.log(`Name: ${this.name} Generos: ${this.genres.forEach((nombre) => {
-            nombre.getName();
-        })}
-              Duracion: ${this.getDuration()}`);
+        console.log(`Name: ${this.name} Generos:`);
+        this.genres.forEach((genre) => {
+            console.log(` -${genre.getName()}`);
+        });
+        console.log(`Duration: ${this.getDuration()}`);
     }
     getDuration() {
         let segundos = 0;
         this.songs.forEach((song) => {
             segundos += song.getDurationSeconds();
         });
+        return segundos;
     }
 }
 exports.Playlist = Playlist;

@@ -7,6 +7,7 @@ export declare class Playlist {
     constructor(name: string, songs: Song[], genres: Genre[]);
     addSong(song: Song): void;
     addGenre(genero: Genre): void;
+    getName(): string;
     showPlaylist(): void;
-    getDuration(): void;
+    getDuration(): number;
 }
