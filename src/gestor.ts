@@ -42,10 +42,8 @@ playlistCheck() {
     choices: this.allPlaylist,
   },
 ];
-  inquirer.prompt(questions).then((answers :Playlist) => {
-  if (answers !== playlist.Rave) {
+  inquirer.prompt(questions).then((answers:Playlist) => {
     playlist.Rave.showPlaylist();
-  }
   });
 }
 createPlaylist() {}

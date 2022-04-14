@@ -7,19 +7,29 @@ export class Playlist {
 addSong(song :Song) :void {
   this.songs.push(song);
 }
+
 addGenre(genero :Genre) :void {
   this.genres.push(genero);
 }
-showPlaylist() {
-  console.log(`Name: ${this.name} Generos: ${this.genres.forEach((nombre) => {
-    nombre.getName();
-  })}
-              Duracion: ${this.getDuration()}`);
+
+getName(){
+  return this.name;
 }
-getDuration() {
+
+showPlaylist() {
+  console.log(`Name: ${this.name} Generos:`);
+  this.genres.forEach((genre) => {
+    console.log(` -${genre.getName()}`);
+  });
+  console.log(`Duration: ${this.getDuration()}`);
+}
+
+getDuration():number {
 let segundos :number = 0;
 this.songs.forEach((song) => {
 segundos += song.getDurationSeconds();
-});
+  });
+return segundos;
 }
 }
+// que asco
