@@ -1,4 +1,4 @@
-# Práctica 7 de Desarrollo de Sistemas Informáticos: Clases e interfaces genéricas. Principios SOLID
+# Práctica 10 de Desarrollo de Sistemas Informáticos: Clases e interfaces genéricas. Principios SOLID
 
 
 ## Índice
@@ -14,4 +14,3 @@
 
 
 ## 2. Ejercicios
-[![Tests](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct07-music-datamodel-grupo-k/actions/workflows/node.js.yml/badge.svg)](https://github.com/ULL-ESIT-INF-DSI-2122/ull-esit-inf-dsi-21-22-prct07-music-datamodel-grupo-k/actions/workflows/node.js.yml)
